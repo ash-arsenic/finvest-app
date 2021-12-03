@@ -10,8 +10,11 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
@@ -51,11 +54,23 @@ public class IntroActivity extends AppCompatActivity {
                 if(pager.getCurrentItem() != fragments.size()-1) {
                     pager.setCurrentItem(pager.getCurrentItem()+1);
                 }else {
-                    Intent intent = new Intent(IntroActivity.this, HomeActivity.class);
-                    startActivity(intent);
+                    if(validate()) {
+                        Intent intent = new Intent(IntroActivity.this, ProgressActivity.class);
+                        startActivity(intent);
+                    }else {
+                        Toast.makeText(IntroActivity.this, "All fields are Required", Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
         });
+    }
+
+    boolean validate() {
+        if(TextUtils.isEmpty(SalaryFragment.getSalary()) || TextUtils.isEmpty(PercentageFragment.getPercentage()) || TextUtils.isEmpty(TimeFragment.getTime())) {
+            return false;
+        } else {
+            return true;
+        }
     }
 
     @Override

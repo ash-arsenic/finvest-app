@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "757383654374",
+    "project_id": "finvest-62556",
+    "storage_bucket": "finvest-62556.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:757383654374:android:b6f6840a7c8d1df5f0c427",
+        "android_client_info": {
+          "package_name": "com.example.finvest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "757383654374-a8orln6141ej19usivtmj2bhdign4efe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrvtx2XRjSMJqw930KN-fNSf4xn1p2HdU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "757383654374-a8orln6141ej19usivtmj2bhdign4efe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
